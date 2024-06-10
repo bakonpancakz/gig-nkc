@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "name": "tools-gigsite",
+  "main": "source/Preview.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon source/Preview.ts",
+    "build": "ts-node source/Build.ts"
+  },
+  "author": {
+    "name": "Jose Silva",
+    "email": "bakonpancakz@gmail.com",
+    "url": "https://github.com/bakonpancakz"
+  },
+  "devDependencies": {
+    "@types/clean-css": "^4.2.11",
+    "@types/uglify-js": "^3.17.5",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "@types/pug": "^2.0.10",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "clean-css": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pug": "^3.0.2",
+    "uglify-js": "^3.17.4"
+  }
+}

@@ -1,0 +1,49 @@
+extends _Template.pug
+block pageEscaped
+    div(class='widget-slices special-shadow')
+        div(class='slices-container')
+            img(class='image-slice' src='/assets/home/slideshow-1.jpg' alt='Slideshow Image #1')
+            img(class='image-slice' src='/assets/home/slideshow-2.jpg' alt='Slideshow Image #2')
+            img(class='image-slice' src='/assets/home/slideshow-3.jpg' alt='Slideshow Image #3')
+            img(class='image-slice' src='/assets/home/slideshow-4.jpg' alt='Slideshow Image #4')
+        div(class='slices-content')
+            p(class='text-hero') Novedades K-chido
+        
+block pageContent
+    div(class='widget widget-paragraph')
+        div(class='paragraph-header')
+            span ⚹
+            div
+            p ABOUT US
+            div
+            span ⚹
+        p 
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    div(class='widget widget-paragraph')
+        div(class='paragraph-header')
+            span ⚹
+            div
+            p OUR PRODUCTS
+            div
+            span ⚹
+        p 
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    div(class='widget widget-wall')
+        //- Row 1
+        img(class='wall-brick special-shadow' style='--w: 20%;' src='/assets/bricks/1.jpg')
+        img(class='wall-brick special-shadow' style='--w: 30%;' src='/assets/bricks/2.jpg')
+        img(class='wall-brick special-shadow' style='--w: 20%;' src='/assets/bricks/3.jpg')
+        img(class='wall-brick special-shadow' style='--w: 30%;' src='/assets/bricks/4.jpg')
+        //- Row 2
+        img(class='wall-brick special-shadow' style='--w: 30%;' src='/assets/bricks/5.jpg')
+        img(class='wall-brick special-shadow' style='--w: 20%;' src='/assets/bricks/6.jpg')
+        img(class='wall-brick special-shadow' style='--w: 30%;' src='/assets/bricks/7.jpg')
+        img(class='wall-brick special-shadow' style='--w: 20%;' src='/assets/bricks/8.jpg')

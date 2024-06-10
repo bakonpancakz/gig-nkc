@@ -1,0 +1,64 @@
+- var SITE_URL = 'https://novedadeskchido.com/'
+- var SITE_NAME = 'Novedades K-chido'
+- var SITE_ACCENT = '#0292b4'
+- var MAP_STREET = '605 Macara Ave,'
+- var MAP_CITY = 'Sunnyvale, CA 94085' 
+- var MAP_URL = 'https://maps.app.goo.gl/RvcGZRTysG77B7dE9'
+- var MAP_HOURS = 'Tues-Sun 11AM - 7PM'
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        //- Site Metadata & OG Tags
+        link(rel='icon' href='/assets/site-favicon.png' type='image/png')
+        meta(property='og:image'    content=`${SITE_URL}/assets/images/site-logo.png`)
+        meta(property='og:title'    content=`${SITE_NAME} - ${FILENAME}`)
+        meta(property='theme-color' content=SITE_ACCENT)
+        //- Fonts & Icons
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet")
+        link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js' integrity='sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==' crossorigin='anonymous' referrerpolicy='no-referrer')
+        //- Document Styles
+        title #{FILENAME} - #{SITE_NAME}
+        link(rel='stylesheet' href=`/assets/global.css?v=${VERSION}`)
+        link(rel='stylesheet' href=`/assets/views.css?v=${VERSION}`)
+        style(type='text/css').
+            :root {
+                --transition-time: 200ms;
+                --color-text: #080808;
+                --color-bg-primary: #e3e5e8;
+                --color-bg-secondary: #f2f3f5;
+                --color-bg-tertiary: #f9f9f9;
+                --color-accent: #{SITE_ACCENT};
+            }
+    body
+        //- Navigation Section
+        div(class='body-wrapper special-shadow' id='wrapper-navigation')
+            div(class='body-content' id='section-navigation')
+                img(class='nav-logo' src='/assets/site-logo.png' alt=`Logo for ${SITE_NAME}`)
+                span •
+                a(class='nav-link' style='--link-color: #dd0405;' href='/') Home
+                a(class='nav-link' style='--link-color: #f5ce31;' href='/products') Products
+                a(class='nav-link' style='--link-color: #0396ae;' href='/contact') Contact
+
+        //- Content Section
+        div(class='body-wrapper' id='wrapper-content')
+            block pageEscaped
+            div(class='body-content' id='section-content')
+                block pageContent
+
+        //- Footer Section
+        div(class='body-wrapper' id='wrapper-footer')
+            div(class='body-content' id='section-footer')
+                div(class='footer-icons')
+                    a(class='footer-link' target='_blank' href='https://www.instagram.com/novedadeskchido/')
+                        img(alt='Logo for Instagram' src='/assets/logos/logo-instagram.png')
+                    a(class='footer-link' target='_blank' href='https://www.tiktk.com/novedadeskchido/')
+                        img(alt='Logo for Tiktok' src='/assets/logos/logo-tiktok.png')
+                p © 2024 Novedades K-chido. All Rights Reserved.
+                a(style='opacity: 0.69' target='_blank' href='https://github.com/bakonpancakz')
+                    | - Site by JS -

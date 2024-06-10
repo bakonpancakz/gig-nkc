@@ -1,0 +1,140 @@
+/* Global Behaviour */
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    /* Makes Links act like Paragraph Elements */
+    display: block;
+}
+
+body,
+p,
+a {
+    /* Removes Default Margin and Padding from Elements */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Text Styles */
+p,
+a,
+span {
+    /* Stylize Text Elements */
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+body {
+    background-color: var(--color-bg-tertiary);
+}
+
+a:hover[href],
+a:focus-visible[href] {
+    text-decoration: underline;
+}
+
+.special-shadow {
+    box-shadow:
+        0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+
+/* Page Layout */
+div.body-wrapper {
+    width: 100%;
+}
+
+div.body-content {
+    max-width: 1024px;
+    padding: 16px 8px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#wrapper-content {
+    min-height: 400px;
+}
+
+
+/* Page Navigation */
+#wrapper-navigation {
+    border-bottom: 2px solid var(--color-accent);
+    background-color: var(--color-bg-secondary);
+}
+
+#section-navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+}
+
+img.nav-logo {
+    height: 32px;
+    object-fit: contain;
+}
+
+a.nav-link {
+    transition: var(--transition-time) ease-in-out color;
+    font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+a.nav-link:hover {
+    color: var(--link-color);
+}
+
+
+/* Page Footer */
+#wrapper-footer {
+    border-top: 2px solid var(--color-accent);
+    background: var(--color-bg-secondary) url(/assets/site-mono.png) no-repeat center right 16px;
+}
+
+#section-footer {
+    text-align: center;
+}
+
+div.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+div.footer-icons img {
+    height: 32px;
+}
+
+a.footer-link {
+    opacity: 0.5;
+    transition: var(--transition-time) ease-in-out opacity;
+}
+
+a.footer-link:hover {
+    opacity: 1;
+}
+
+
+/* Mobile Styling */
+@media (max-width: 640px) {
+    #section-navigation {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #section-navigation span {
+        display: none;
+    }
+
+    img.nav-logo {
+        width: 100%;
+    }
+}
